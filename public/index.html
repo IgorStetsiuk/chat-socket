@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="modal">
+        <p class="modal__title">Go to the chat!</p>
+        <form action="" id="login">
+            <label for="name">User Name</label>
+            <input class="login__name" type="text" id="name" placeholder="Name">
+            <label for="nickname">User Nickname</label>
+            <input class="login__nickname" type="text" id="nickname" placeholder="Nickname">
+            <button id="login__btn" type="submit">Send</button>
+        </form>
+    </div>
+    <div class="content">
+        <aside class="sidebar user">
+            <div class="sidebar__title">
+                Users online
+            </div>
+            <ul id="user__list">
+                <li class="user__item"></li>
+            </ul>
+        </aside>
+        <div class="messages">
+            <ul id="messages__list">
+
+            </ul>
+            <div class="messages__form-wrapper">
+                <form id="msg-board__form">
+                    <input type="text" id="msg-board__input" placeholder="Message">
+                    <button type="submit" id="msg-board__btn">Send</button>
+                </form>
+                <p class="messages__typing">
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
